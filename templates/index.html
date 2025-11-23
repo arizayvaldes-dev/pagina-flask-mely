@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/app.js"></script>
+    <title>Página web mely</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Mel</div>
+        <ul class="nav-links"> 
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <h1>Bienvenido a Nuestra Página Web</h1>
+        <p>Descubre nuestros servicios</p>
+        <a href="servicios" class="btn-primary">Descubrir más</a>
+    </header>
+
+    <main>
+        <section id="servicios" class="cards-container">
+            <h2>Nuestros servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Servicio 1</h3>
+                    <p>Descripcion de este servicio</p>
+                </div>
+
+                    <div class="card">
+                        <h3>Servicio 2</h3>
+                        <p>Descripcion de este servicio</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Servicio 3</h3>
+                        <p>Descripcion de este servicio</p>
+                    </div>
+            </div>
+        </section>
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <form id="contact-form" method="POST" action="/send_email">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" requiried>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!--Contenedor para mensajes flash-->
+        <div id="flash-messages" class="flash-messages"></div>
+
+        <section id="acerca" class="about-section">
+            <h2>Acerca De Nosotros</h2>
+            <p>Somos una empresa dedicada a brindar soluciones rápidas y eficaces.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
