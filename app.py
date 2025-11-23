@@ -14,6 +14,9 @@ SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 FROM_EMAIL = os.getenv('FROM_EMAIL')  # tu correo verificado en SendGrid
 TO_EMAIL = os.getenv('TO_EMAIL')      # correo donde quieres recibir los mensajes
 
+print(">>> API KEY:", SENDGRID_API_KEY)
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
