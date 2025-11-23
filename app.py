@@ -9,15 +9,9 @@ app = Flask(__name__)
 
 app.secret_key = os.getenv('FLASK_SECRET_KEY', '123')
 
-app.config['MAIL_SERVER'] ='smtp.gmail.com'
-app.config['MAIL_PORT'] =587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_DEFAULT_SENDER'] = app.config['MAIL_USERNAME']
-
-
-mail = Mail(app)
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+FROM_EMAIL = os.getenv('FROM_EMAIL')  # tu correo verificado en SendGrid
+TO_EMAIL = os.getenv('TO_EMAIL')
 
 @app.route('/')
 def index():
